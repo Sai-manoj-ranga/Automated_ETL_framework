@@ -404,11 +404,7 @@ azure-etl-framework/
 │   ├── patients.xlsx
 │   ├── Doctors.xlsx
 │   ├── appointments.xlsx
-│   ├── customers-10000.csv
 │   ├── organizations-1000.csv
-│   ├── products-1000.csv
-│   ├── india_job_market.xcel.csv
-│   └── Weather_Dataset.csv
 │
 ├── 🖼️ architecture-diagram.svg  # Pipeline architecture diagram
 └── 📄 README.md
@@ -432,8 +428,8 @@ azure-etl-framework/
 **Sai Manoj Ranga**
 - GitHub: [@Sai-manoj-ranga](https://github.com/Sai-manoj-ranga)
 ## Co-Authors
-**Suchandana Alluri**
-**Sumanth Ravichettu**
+**Suchandana Alluri** |
+**Sumanth Ravichettu** |
 **Tejeswar Reddy Somula**
 ---
 
