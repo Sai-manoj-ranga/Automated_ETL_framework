@@ -45,6 +45,10 @@ Azure SQL DB  ──┘     (4 Pipelines)          Bronze → Silver      Dashbo
                                              Silver → Gold
 ```
 
+### ADLS Project Pipeline
+
+![ADLS Project Pipeline](image/ADSL%20Project%20pipeline.png)
+
 ---
 
 ## 🛠 Tech Stack
@@ -106,6 +110,10 @@ Reads multi-source files, applies transformations using ADF Data Flows, and writ
 
 Reads from Azure SQL Database and writes through Bronze → Silver → Gold using Databricks notebooks.
 
+### Pipeline Trigger
+
+![Trigger Pipeline](image/Trigger%20Pipeline.png)
+
 ---
 
 ## 📊 Datasets
@@ -115,8 +123,8 @@ Reads from Azure SQL Database and writes through Bronze → Silver → Gold usin
 | `patients.xlsx` | Excel | Healthcare |
 | `Doctors.xlsx` | Excel | Healthcare |
 | `appointments.xlsx` | Excel | Healthcare |
-| `inventory.xlsx` | Excel | HealthCare |
-| `organizations-1000.csv` | CSV | Business |
+| `inventory.xlsx` | Excel | Inventory |
+| `organization.csv` | CSV | Business |
 
 ---
 
@@ -174,6 +182,10 @@ The dashboard connects directly to the **Gold layer** Delta tables.
 - 🗺️ Revenue by City (Map / Filled Map)
 - 👨‍⚕️ Top Doctors Performance (Table)
 - ✅ Appointment Status Breakdown (Donut Chart)
+
+### Dashboard Preview
+
+![Power BI Dashboard](image/PowerBI%20dashboard.png)
 
 ---
 
@@ -254,8 +266,6 @@ az databricks workspace create \
 
 ### Step 2 — Upload Data Files to Blob Storage
 
-Upload the sample CSV/Excel files from this repo to your Blob Storage container:
-
 ```bash
 # Create containers
 az storage container create --name inputcontainer --account-name stgetlstorage
@@ -289,7 +299,6 @@ adlsetlframework/
 ```
 
 ```bash
-# Create ADLS filesystem and directories
 az storage fs create --name healthcare --account-name adlsetlframework
 az storage fs directory create -n bronze -f healthcare --account-name adlsetlframework
 az storage fs directory create -n silver -f healthcare --account-name adlsetlframework
@@ -396,20 +405,23 @@ In ADF Studio, trigger each pipeline in order:
 ## 📁 Folder Structure
 
 ```
-azure-etl-framework/
+Automated_ETL_framework/
 │
-├── 📓 medillion code.ipynb      # Databricks PySpark transformation notebook
-├── 📊 mainproject.pbix          # Power BI dashboard file
+├── 📓 medillion code.ipynb       # Databricks PySpark transformation notebook
+├── 📊 mainproject.pbix           # Power BI dashboard file
+├── 🖼️ architecture-diagram.svg   # Pipeline architecture diagram
+├── 📄 README.md
 │
-├── 📁 data/                     # Sample datasets
-│   ├── patients.xlsx
+├── 📁 image/                     # Screenshots & diagrams
+│   ├── ADSL Project pipeline.png
+│   ├── PowerBI dashboard.png
+│   └── Trigger Pipeline.png
+│
+├── 📁 data/
 │   ├── Doctors.xlsx
 │   ├── appointments.xlsx
 │   ├── inventory.xlsx
-│   ├── organizations-1000.csv
-│
-├── 🖼️ architecture-diagram.svg  # Pipeline architecture diagram
-└── 📄 README.md
+│   ├── patients.xlsx
 ```
 
 ---
@@ -427,12 +439,12 @@ azure-etl-framework/
 
 ## 👤 Author
 
-**Sai Manoj Ranga**
-- GitHub: [@Sai-manoj-ranga](https://github.com/Sai-manoj-ranga)
-## Co-Authors
-**Suchandana Alluri** |
-**Sumanth Ravichettu** |
-**Tejeswar Reddy Somula**
+**Sai Manoj Ranga** — [@Sai-manoj-ranga](https://github.com/Sai-manoj-ranga)
+
+## 🤝 Co-Authors
+
+**Suchandana Alluri** | **Sumanth Ravichettu** | **Tejeswar Reddy Somula**
+
 ---
 
 *Built with Azure ☁️ | Powered by Data Engineering*
