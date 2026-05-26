@@ -123,8 +123,7 @@ Reads from Azure SQL Database and writes through Bronze → Silver → Gold usin
 | `patients.xlsx` | Excel | Healthcare |
 | `Doctors.xlsx` | Excel | Healthcare |
 | `appointments.xlsx` | Excel | Healthcare |
-| `inventory.xlsx` | Excel | Inventory |
-| `organization.csv` | CSV | Business |
+| `inventory.xlsx` | Excel | HealthCare |
 
 ---
 
