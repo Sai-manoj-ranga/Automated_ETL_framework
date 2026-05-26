@@ -115,11 +115,7 @@ Reads from Azure SQL Database and writes through Bronze → Silver → Gold usin
 | `patients.xlsx` | Excel | Healthcare |
 | `Doctors.xlsx` | Excel | Healthcare |
 | `appointments.xlsx` | Excel | Healthcare |
-| `customers-10000.csv` | CSV | E-Commerce |
 | `organizations-1000.csv` | CSV | Business |
-| `products-1000.csv` | CSV | E-Commerce |
-| `india_job_market.xcel.csv` | CSV | Labour Analytics |
-| `Weather_Dataset.csv` | CSV | IoT / Environment |
 
 ---
 
